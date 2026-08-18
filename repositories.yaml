@@ -298,8 +298,8 @@ libraries:
       - devtools/shared/heapsnapshot/metrics.yaml
       - docshell/base/metrics.yaml
       - dom/base/use_counter_metrics.yaml
+      - dom/cache/metrics.yaml
       - dom/canvas/metrics.yaml
-      - dom/crypto/metrics.yaml
       - dom/geolocation/metrics.yaml
       - dom/indexedDB/metrics.yaml
       - dom/localstorage/metrics.yaml
@@ -311,7 +311,6 @@ libraries:
       - dom/metrics.yaml
       - dom/notification/metrics.yaml
       - dom/performance/metrics.yaml
-      - dom/power/metrics.yaml
       - dom/push/metrics.yaml
       - dom/quota/metrics.yaml
       - dom/security/metrics.yaml
@@ -349,7 +348,6 @@ libraries:
       - toolkit/components/backgroundhangmonitor/metrics.yaml
       - toolkit/components/captchadetection/metrics.yaml
       - toolkit/components/cleardata/metrics.yaml
-      - toolkit/components/cookiebanners/metrics.yaml
       - toolkit/components/doh/metrics.yaml
       - toolkit/components/downloads/metrics.yaml
       - toolkit/components/enterprisepolicies/metrics.yaml
@@ -377,7 +375,6 @@ libraries:
       - toolkit/content/widgets/metrics.yaml
       - toolkit/modules/gecko_metrics.yaml
       - toolkit/mozapps/extensions/metrics.yaml
-      - toolkit/mozapps/extensions/metrics_legacy.yaml
       - toolkit/mozapps/handling/metrics.yaml
       - toolkit/mozapps/update/metrics.yaml
       - toolkit/profile/metrics.yaml
@@ -416,7 +413,6 @@ applications:
       - browser/components/asrouter/metrics.yaml
       - browser/components/attribution/metrics.yaml
       - browser/components/backup/metrics.yaml
-      - browser/components/contentsharing/metrics.yaml
       - browser/components/contextualidentity/metrics.yaml
       - browser/components/controlcenter/metrics.yaml
       - browser/components/customkeys/metrics.yaml
@@ -434,9 +430,12 @@ applications:
       - browser/components/profiles/metrics.yaml
       - browser/components/protections/metrics.yaml
       - browser/components/protocolhandler/metrics.yaml
+      - browser/components/referrals/metrics.yaml
       - browser/components/screenshots/metrics.yaml
       - browser/components/search/metrics.yaml
       - browser/components/sessionstore/metrics.yaml
+      - browser/components/sharing/metrics.yaml
+      - browser/components/shell/metrics.yaml
       - browser/components/sidebar/metrics.yaml
       - browser/components/tabbrowser/metrics.yaml
       - browser/components/tabnotes/metrics.yaml
@@ -467,6 +466,7 @@ applications:
       - browser/components/backup/pings.yaml
       - browser/components/newtab/pings.yaml
       - browser/components/profiles/pings.yaml
+      - browser/components/referrals/pings.yaml
       - browser/components/search/pings.yaml
       - browser/components/urlbar/pings.yaml
       - browser/modules/pings.yaml
@@ -899,6 +899,7 @@ applications:
       - tlong@mozilla.com
     url: https://github.com/mozilla-mobile/firefox-ios
     metrics_files:
+      - firefox-ios/Client/Glean/probes/ai.quick_answers.yaml
       - firefox-ios/Client/Glean/probes/ai.summarizer.yaml
       - firefox-ios/Client/Glean/probes/ai.translations.yaml
       - firefox-ios/Client/Glean/probes/app_icon.yaml
@@ -908,6 +909,9 @@ applications:
       - firefox-ios/Client/Glean/probes/autofill.email_mask.yaml
       - firefox-ios/Client/Glean/probes/autofill.password_generator.yaml
       - firefox-ios/Client/Glean/probes/autofill.passwords.yaml
+      - firefox-ios/Client/Glean/probes/broken_site_report.interactions.yaml
+      - firefox-ios/Client/Glean/probes/broken_site_report.yaml
+      - firefox-ios/Client/Glean/probes/google_lens.yaml
       - firefox-ios/Client/Glean/probes/history.yaml
       - firefox-ios/Client/Glean/probes/homepage.shortcuts_library.yaml
       - firefox-ios/Client/Glean/probes/library.bookmarks_panel.yaml
@@ -921,13 +925,16 @@ applications:
       - firefox-ios/Client/Glean/probes/settings.yaml
       - firefox-ios/Client/Glean/probes/share.open_in_firefox_extension.yaml
       - firefox-ios/Client/Glean/probes/share_sheet.yaml
+      - firefox-ios/Client/Glean/probes/system.camera.yaml
+      - firefox-ios/Client/Glean/probes/system.photo_picker.yaml
       - firefox-ios/Client/Glean/probes/tabs_panel.yaml
       - firefox-ios/Client/Glean/probes/terms_of_use.yaml
       - firefox-ios/Client/Glean/probes/toolbar.yaml
       - firefox-ios/Client/Glean/probes/top_sites.yaml
+      - firefox-ios/Client/Glean/probes/tracker_blocker.yaml
       - firefox-ios/Client/Glean/probes/tracking_protection.yaml
       - firefox-ios/Client/Glean/probes/user.yaml
-      - firefox-ios/Client/Glean/probes/world_cup_widget.yaml
+      - firefox-ios/Client/Glean/probes/webview.error_page.wayback_machine.yaml
       - firefox-ios/Client/Glean/probes/zoom_bar.yaml
       - firefox-ios/Storage/metrics.yaml
     ping_files:
